@@ -31,7 +31,7 @@ namespace QV_Ejecucion
             // Mostrar matriz
             g.MostrarMatrices();
 
-            Console.WriteLine("\nEJECUTAR DIJKSTRA");
+            Console.WriteLine("\n DIJKSTRA");
 
             Console.Write("Ingrese origen (A, B, C, D, E): ");
             string origen = Console.ReadLine().ToUpper();
