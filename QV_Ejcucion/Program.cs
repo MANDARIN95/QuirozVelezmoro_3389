@@ -13,40 +13,31 @@ namespace QV_Ejecucion
         {
             QV_Grafo g = new QV_Grafo();
 
-
+            // === 5 VÉRTICES ===
             g.AgregarVertice("A");
             g.AgregarVertice("B");
             g.AgregarVertice("C");
             g.AgregarVertice("D");
             g.AgregarVertice("E");
-            g.AgregarVertice("F");
-            g.AgregarVertice("T");
-            g.AgregarVertice("I");
 
+            // === 6 ARISTAS ===
+            g.AgregarArista("A", "B", 2);
+            g.AgregarArista("A", "C", 4);
+            g.AgregarArista("B", "D", 3);
+            g.AgregarArista("C", "D", 1);
+            g.AgregarArista("D", "E", 5);
+            g.AgregarArista("C", "E", 7);
 
-            g.AgregarArista("A", "B", 1);
-            g.AgregarArista("A", "D", 1);
-            g.AgregarArista("B", "C", 1);
-            g.AgregarArista("B", "D", 7);
-            g.AgregarArista("B", "F", 6);
-            g.AgregarArista("C", "F", 10);
-            g.AgregarArista("C", "B", 1);
-            g.AgregarArista("D", "E", 2);
-            g.AgregarArista("D", "T", 18);
-            g.AgregarArista("E", "T", 9);
-            g.AgregarArista("F", "T", 2);
-            g.AgregarArista("I", "A", 9);
-            g.AgregarArista("I", "C", 2);
-
-
+            // Mostrar matriz
             g.MostrarMatrices();
 
-            Console.WriteLine("\n DIJKSTRA");
-            Console.Write("Ingrese origen: ");
-            string origen = Console.ReadLine().ToUpper();
-            Console.Write("Ingrese destino: ");
-            string destino = Console.ReadLine().ToUpper();
+            Console.WriteLine("\nEJECUTAR DIJKSTRA");
 
+            Console.Write("Ingrese origen (A, B, C, D, E): ");
+            string origen = Console.ReadLine().ToUpper();
+
+            Console.Write("Ingrese destino (A, B, C, D, E): ");
+            string destino = Console.ReadLine().ToUpper();
 
             g.Dijkstra(origen, destino);
 
