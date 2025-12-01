@@ -13,14 +13,14 @@ namespace QV_Ejecucion
         {
             QV_Grafo g = new QV_Grafo();
 
-            // === 5 VÉRTICES ===
+            
             g.AgregarVertice("A");
             g.AgregarVertice("B");
             g.AgregarVertice("C");
             g.AgregarVertice("D");
             g.AgregarVertice("E");
 
-            // === 6 ARISTAS ===
+           
             g.AgregarArista("A", "B", 2);
             g.AgregarArista("A", "C", 4);
             g.AgregarArista("B", "D", 3);
@@ -28,7 +28,7 @@ namespace QV_Ejecucion
             g.AgregarArista("D", "E", 5);
             g.AgregarArista("C", "E", 7);
 
-            // Mostrar matriz
+            
             g.MostrarMatrices();
 
             Console.WriteLine("\n DIJKSTRA");
